@@ -1,0 +1,17 @@
+steps:
+# Deploy container to existing VM instance
+- name: 'gcr.io/cloud-builders/gcloud'
+  id: 'deploy-container'
+  args: [
+    'compute', 'instances', 'create-with-container', 'sharma-instance',
+    '--zone=northamerica-northeast2-a',  # Specify your VM's zone
+    '--container-image=asrma7/python-backend:latest',
+    '--container-restart-policy=always',
+    '--container-port=5000'  # Adjust port as needed
+  ]
+
+# Timeout for the entire build process
+timeout: '600s'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
