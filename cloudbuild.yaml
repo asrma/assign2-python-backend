@@ -6,8 +6,7 @@ steps:
     'compute', 'instances', 'create-with-container', 'sharma-instance',
     '--zone=us-central1-a',  # Specify your VM's zone
     '--container-image=asrma7/python-backend:latest',
-    '--container-restart-policy=always',
-    '--container-port=5000'  # Adjust port as needed
+    '--container-restart-policy=always'
   ]
 
 # Timeout for the entire build process
