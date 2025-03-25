@@ -4,7 +4,7 @@ steps:
   id: 'deploy-container'
   args: [
     'compute', 'instances', 'create-with-container', 'sharma-instance',
-    '--zone=northamerica-northeast2-a',  # Specify your VM's zone
+    '--zone=us-central1-a',  # Specify your VM's zone
     '--container-image=asrma7/python-backend:latest',
     '--container-restart-policy=always',
     '--container-port=5000'  # Adjust port as needed
